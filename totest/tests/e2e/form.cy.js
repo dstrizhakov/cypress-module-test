@@ -2,9 +2,7 @@ describe("Form test", () => {
   it("Can fill the form", () => {
     cy.visit("/");
     cy.get("form");
-    cy.get('input[name="name"]')
-      .type("Molly")
-      .should("have.value", "Molly");
+    cy.get('input[name="name"]').type("Molly").should("have.value", "Molly");
     cy.get('input[name="email"]')
       .type("molly@dev.dev")
       .should("have.value", "molly@dev.dev");
