@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "type": "module",
+  "type": "commonjs",
   "scripts": {
     "cy-open": "cypress open",
     "cy-run": "cypress run"
@@ -16,5 +16,13 @@
     "cypress": "^12.17.1",
     "cypress-multi-reporters": "^1.6.3",
     "mocha-junit-reporter": "^2.2.1"
+  },
+  "devDependencies": {
+    "child_process": "^1.0.2",
+    "i": "^0.3.7",
+    "npm": "^9.8.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "^5.0.1"
   }
 }
