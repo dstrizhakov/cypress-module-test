@@ -4,7 +4,7 @@ const express = require("express");
 
 const { dirname } = require("path");
 const appDir = dirname(require.main.filename);
-console.log("This AppDir: ", appDir);
+console.log("THIS AppDir: ", appDir.toUpperCase());
 
 const child_process = require("child_process");
 let _exec = child_process.exec;
@@ -18,9 +18,9 @@ function getPath(relPath) {
   return path.join(appDir, relPath);
 }
 
-const CY_TEMPLATE = getPath("dist");
-const CY_TEST_CASES = getPath("dist");
-const CY_TEST_HOST = "http://127.0.0.1:5500/dist";
+const CY_TEMPLATE = getPath("dist"); // ** ТУТ ПЕРЕДАТЬ ОТНОСИТЕЛЬНЫЙ ПУТЬ К ПАПКЕ TEMPLATE  ** //
+const CY_TEST_CASES = getPath("dist"); // ** ТУТ ПЕРЕДАТЬ ОТНОСИТЕЛЬНЫЙ ПУТЬ К ПАПКЕ TESTS  ** //
+const CY_TEST_HOST = "http://127.0.0.1:5500/dist"; // ** ТУТ СТРОКА С АДРЕСОМ ХОСТА **//
 const CY_VIDEO_COMPRESSION = 0;
 
 console.log("ENV PARAMETERS: ", CY_TEMPLATE, CY_TEST_CASES, CY_TEST_HOST, CY_VIDEO_COMPRESSION);
